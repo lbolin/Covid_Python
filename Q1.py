@@ -10,10 +10,16 @@ mydb = mysql.connector.connect(
     database="covid"
 )
 mycursor = mydb.cursor()
-mycursor.execute("SELECT `state`,`date`,`positive`,`death` From `all-states` where `date` = 20200829")
+mycursor.execute("SELECT `state`,`date`,`totalTestResults`,`positive`,`death` From `all-states` where `date` = 20200830")
 # myresult = mycursor.fetchall()
 mytable = from_db_cursor(mycursor)
 
 print(mytable)
 
+#Out
++-----------------------+
+| AvgDeathFor08.29.2020 |
++-----------------------+
+|       3133.8780       |
++-----------------------+
 
