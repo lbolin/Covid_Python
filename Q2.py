@@ -15,3 +15,12 @@ mycursor.execute("SELECT AVG(`death`) As `AvgDeathFor08.29.2020` From `all-state
 mytable = from_db_cursor(mycursor)
 
 print(mytable)
+
+'''
+Sample Output:
++-----------------------+
+| AvgDeathFor08.29.2020 |
++-----------------------+
+|       3133.8780       |
++-----------------------+
+'''
